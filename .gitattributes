@@ -1,0 +1,12 @@
+# Aplica manejo automático de finales de línea para todos los archivos de texto
+# Git trata los archivos de texto según el sistema operativo:
+# LF en macOS/Linux y CRLF en Windows
+* text=auto
+
+# Configurar archivos binarios, como imágenes, para que no se modifiquen
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.svg binary
+*.webp binary

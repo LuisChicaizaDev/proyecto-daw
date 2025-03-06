@@ -1,0 +1,115 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+// Panel Control
+.panel-info__title{
+    color: v.$white;
+
+    .panel-info__name{
+        text-transform: capitalize;
+    }
+}
+.panel-info__tabs{
+    margin: 10rem 0 0;
+
+}
+
+
+// Lista layout
+.lista-layout{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 4.2rem 0;
+
+    .no-results{
+        grid-column: 1 / -1;
+    }
+
+    .lista-header,
+    .lista-body{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @include m.tablet{
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include m.desktop{
+            grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr;
+        }
+    }
+    .lista-header{
+        background-color: v.$gold;
+        border-radius: 1.6rem;
+
+        .lista-header__item{
+            color: v.$blue_navy;
+            font-weight: v.$bold;
+        }
+    }
+
+    .lista-header__item,
+    .lista-body__item{
+        padding: 2.4rem .8rem;
+        text-align: center;
+        overflow-wrap: break-word;
+        align-content: center;
+        text-transform: capitalize;
+    }
+
+    .lista-body__link--image{
+        overflow: hidden;
+        &:hover{
+            .lista-body__image{
+                @include m.hover-image;
+            }
+        }
+    }
+
+    .lista-body__image{
+        max-width: 18rem;
+        height: 18rem;
+        border-radius: .8rem;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    .btn-editar,
+    .btn-eliminar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .8rem;
+        font-size: 1.4rem;
+        color: v.$gold;
+
+        &:hover{
+            opacity: .75;
+            transition: opacity 0.3s ease-in;
+         }
+    }
+
+    .btn-eliminar{
+        input{
+            border: none !important;
+            background: none !important;
+            color: v.$gold;
+            font-family: v.$font_paragraph;
+            font-weight: v.$medium;
+        }
+    }
+}
+
+// Previsualizar imagen
+.publicar-velada,
+.actualizar-velada{
+    .imagen-preview,
+    .imagen-seleccionada {
+        .figure-img{
+            border-radius: .8rem;
+            width: 25rem;
+            margin: 1.6rem 0;
+        }
+    }
+}

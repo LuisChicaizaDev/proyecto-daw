@@ -1,0 +1,76 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+/* Si el navegador no soporta .webp*/
+.no-webp .home-bg{
+    background-image: url(../img/bg-inicio.jpg);
+}
+.webp .home-bg{
+    background-image: url(../img/bg-inicio.webp);
+}
+.no-webp .contact-bg{
+    background-image: url(../img/bg-contacto.jpg);
+}
+.webp .contact-bg{
+    background-image: url(../img/bg-contacto.webp);
+}
+
+.header{
+    background-color: v.$gray_dark;
+    position: relative;
+
+    &.home-bg,
+    &.contact-bg{
+        background-position: center center;
+        background-size: cover;
+
+        
+        min-height: 100vh;
+        
+        .header__content{
+            @include m.tablet{
+                min-height: 70rem;
+            }
+        }
+    }
+
+    h1, p{
+        color: v.$white;
+    }
+}
+
+.logo__header{
+    z-index: 10 !important;
+
+    .logo__image{
+        width: 12rem;
+
+        @include m.tablet{
+            width: 14rem;
+        }
+    }
+}
+
+
+
+.header__content{
+    z-index: 10 !important;
+    
+    .header__text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+
+        h1,
+        p{
+            max-width: 80rem;
+        }
+    }
+}
+

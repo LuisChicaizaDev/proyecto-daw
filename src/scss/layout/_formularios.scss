@@ -1,0 +1,197 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contacto__title{
+    margin-bottom: 8rem;
+}
+
+.formulario{
+    max-width: 70rem;
+    margin: 10rem auto;
+}
+
+.formulario-alert{
+    max-width: 55rem;
+}
+
+.formulario-group{
+    margin-bottom: 2.4rem;
+    
+    .label-imagen__cartelera,
+    label{
+        margin-bottom: 1.2rem;
+        font-weight: v.$semi_bold;
+    }
+
+    input::placeholder,
+    textarea::placeholder{
+        margin-bottom: 0;
+        position: absolute;
+        z-index: 1;
+        top: .6rem;
+        left: 1.5rem;
+        right: 1.5rem;
+        color: v.$gray_dark;
+    }
+
+    .cartelera__label,
+    input:not([type="checkbox"]),
+    textarea,
+    select{
+        display: block;
+        width: 100%;
+        line-height: 1.85;
+        padding: 1.8rem;
+        color: v.$gray_dark;
+        background-color: v.$white;
+        border: 1px solid v.$gray_dark;
+        border-radius: .8rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        &:focus{
+            outline: none;
+            border: 3px solid v.$gold;
+            box-shadow: 0 0 0 0.25rem rgb(255, 255, 255, 0.4);
+        }
+    }
+
+    select,
+    input[type="file"]{
+        cursor: pointer;
+    }
+    
+    a{
+        color: v.$gold;
+        
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+      
+}
+
+.formulario-submit{
+    width: 100%;
+    margin-top: 4.2rem;
+}
+
+.required{
+    font-weight: v.$bold;
+    color: v.$red;
+}
+
+// Formulario Login
+.login-tabs{
+    max-width: 70rem;
+    margin: 0 auto;
+}
+.acceder-form__group--contrasenia,
+.registrarse-form__group--contrasenia,
+.registrarse-form__group--contrasenia-confirm,
+.restablecer-form__group--contrasenia,
+.restablecer-form__group--contrasenia-confirm{
+    position: relative;
+    .contrasenia__button{
+        position: absolute;
+        top: 5.8rem;
+        right: 1.6rem;
+    }
+
+    .contrasenia__icon-eye{
+        svg{
+            width: 2.6rem;
+            height: 2.6rem;
+        }
+        &:hover{
+            color: v.$gold;
+            transition: color 0.3s ease-in;
+        }
+    }
+}
+.formulario-group-row{
+    @include m.tablet{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.formulario-group{
+    .restablecer-contrasenia,
+    .iniciar-sesion{
+        text-decoration: underline;
+    }
+}
+// Formulario publicar velada
+.velada-form__group--imagen{
+    @include m.mobile{
+        width: 65%;
+    }
+
+    .label-imagen__cartelera{
+        margin-bottom: 1.2rem;
+    }
+
+    .cartelera__label{
+        cursor: pointer;
+
+        @include m.tablet{
+            width: 60%;
+        }
+
+        &:hover{
+            outline: none;
+            border: 3px solid v.$gold;
+            box-shadow: 0 0 0 0.25rem rgb(255, 255, 255, 0.4);
+        }
+    }
+
+    .imagen_input{
+        width: 0.1px !important;
+        height: 0.1px;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+}
+.velada-form__group--fecha,
+.velada-form__group--hora,
+.velada-form__group--precio{
+    @include m.mobile{
+        width: 35%;
+    }
+}
+
+.velada-form__group--combates,
+.combate-buttons{
+    @include m.mobile{
+        width: 70%;
+    }
+}
+
+.velada-form__group--combates{
+    .combate-boxeadores__item{
+        width: 40%;
+        margin: .8rem 0;
+    }
+}
+
+.velada-form__group--combates{
+    #contador-combates{
+        font-family: v.$font_heading;
+        font-size: 1.8rem;
+        margin-right: .6rem;
+        color: v.$gold;
+        border-bottom: 2px solid v.$gold;
+    }
+}
+
+// Formulario crear boxeador
+.registrar-boxeador__formulario{
+    .formulario-group{
+        width: 100%;
+        @include m.tablet{
+            width: 40%;
+        }
+    }
+}

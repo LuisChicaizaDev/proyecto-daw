@@ -1,0 +1,28 @@
+// Tipografias
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+
+$font_heading:  "Teko", sans-serif;
+$font_paragraph: "Montserrat", sans-serif;
+
+// Media Queries
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 992px;
+$desktopXl: 1224px;
+
+//paleta colores
+$gold: #C3AA72;
+$blue_navy: #002147;
+$black: #0E0E12;
+$white: #fff;
+$gray_dark: #3E4347;
+$red: #d13232;
+$turquoise_light: #B6EFFB;
+$slate_dark: #055160;
+
+//peso de la fuente
+$bold: 700;
+$semi_bold: 600;
+$medium: 500;
+$regular: 400;
+$light: 300;

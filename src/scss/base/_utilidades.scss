@@ -1,0 +1,135 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.my-container{
+    margin: 0 auto;
+    width: min(100%, 140rem);
+}
+.container-fluid{
+    padding: 0 !important;
+}
+.row{
+    margin: 0 auto;
+}
+
+.show{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+// Paddings movil, tablet, desktop
+.my-paddings{
+    @include m.padding-mobile;
+
+    @include m.tablet{
+        @include m.padding-tablet;
+    }
+    @include m.desktop{
+        @include m.padding-desktop
+    }
+}
+
+// Buttons
+.btn-gold{
+    @include m.button(v.$gold, v.$black, inline-block);
+}
+.btn-gold-block{
+    @include m.button(v.$gold, v.$black, block);
+}
+.btn-turquoise{
+    @include m.button(v.$turquoise_light, v.$slate_dark, inline-block);
+}
+.btn-red{
+    @include m.button(v.$red, v.$white, inline-block);
+}
+.btn-blue{
+    @include m.button(v.$blue-navy, v.$white, inline-block);
+}
+
+.btn-back{
+    color: v.$gold;
+    font-size: 2.6rem;
+    display: flex;
+    gap: .6rem;
+    align-items: center;
+    transition: color 0.25s ease-in;
+    text-decoration: underline;
+    font-family: v.$font_heading;
+    &:hover{
+        color: v.$white;
+    }
+}
+// Overlay bg-image
+.banner-bg-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+} 
+
+// padding pag internas
+.interna,
+.interna-details{
+    h1{
+        margin: 12rem 0 4.8rem 0;
+    }
+}
+
+// to top
+.to-top__button{
+    background-color: v.$gold;
+    padding: .8rem;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 2.4rem;
+    right: 2.4rem;
+    opacity: 0;
+    z-index: -1;
+
+    &.show-button{
+        opacity: 1;
+        transition: opacity 0.5s ease-in;
+        z-index: 15;
+    }
+}
+
+// Dark Mode
+.light-mode__button{
+    background-color: v.$gray_dark;
+    border: 1px solid v.$gray_dark;
+    padding: .8rem;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 7.5rem;
+    right: 2.4rem;
+    z-index: 15;
+
+    img{
+        filter: invert(1);
+    }
+}
+
+// Nav Tabs
+.tabs-listing{
+    border-bottom-width: 3px;
+
+    .nav-tabs__item{
+        margin: 0 2.4rem 0 0;;
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+
+.nav-tabs__item{
+    .nav-link{
+        @include m.tabs-links(v.$white, v.$gold, v.$gold, v.$black);
+    }
+}

@@ -1,0 +1,117 @@
+@use 'variables' as v;
+@use 'sass:color';
+
+@mixin mobile {
+    @media (min-width: #{v.$mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{v.$tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{v.$desktop}) {
+        @content;
+    }
+}
+@mixin desktopXl {
+    @media (min-width: #{v.$desktopXl}) {
+        @content;
+    }
+}
+
+// Grid
+@mixin grid($columnas, $espaciado ) {
+    display: grid;
+    gap: $espaciado;
+    grid-template-columns: repeat($columnas, 1fr);
+}
+
+//resetear estilos listas
+@mixin reset-lista{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+//paddings
+@mixin padding-desktop{
+    padding: 3.2rem 8rem;
+}
+@mixin padding-tablet{
+    padding: 1.8rem 3.2rem;
+}
+@mixin padding-mobile{
+    padding: 1.6rem;
+}
+// Button
+@mixin button($bgColor, $color, $display){
+    display: $display;
+    background-color: $bgColor;
+    color: $color;
+    font-weight: v.$semi_bold;
+    text-decoration: none;
+    padding: 1.6rem 3.2rem;
+    text-align: center;
+    border-radius: .4rem;
+    border: none;
+    transition: background-color 0.2s ease-in-out 0s;
+
+    &:hover {
+        background-color: color.scale($bgColor, $lightness: -15%);
+        color: $color;
+        cursor: pointer;
+    }
+    &:active {
+        background-color: color.scale($bgColor, $lightness: -25%);
+        color: $color;
+    }
+}
+
+// hover image ovelay
+@mixin hover-image{
+    transform: scale(1.05);
+    filter: brightness(0.8);
+    transition: all 0.35s ease-in 0s;
+}
+
+@mixin tabs-links($colorLink,$bgBefore, $colorActive, $bgActive ){
+    position: relative;
+    color: $colorLink;
+    font-weight: v.$semi_bold;
+    padding: 1.2rem 1.6rem;
+    border: none;
+    font-size: 2rem;
+
+    &::before{
+        content: '';
+        width: 0%;
+        height: .3rem;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        background-color: $bgBefore;
+        z-index: 1;
+        transition: all 0.2s ease-in-out 0s;
+    }
+
+    &.active{
+        color: $colorActive;
+        background-color: $bgActive;
+
+        &::before{
+            width: 100%;
+        }
+
+    }
+
+    &:hover{
+        
+        &::before{
+            width: 100%;
+        }
+    }
+}

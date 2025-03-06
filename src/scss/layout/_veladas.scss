@@ -1,0 +1,308 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.veladas{
+
+    h2{
+        margin: 8rem 0;
+    }
+}
+
+.container__veladas{
+    display: grid;
+    gap: 4.8rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+    margin-bottom: 8rem;
+}
+
+.velada__card{
+    position: relative;
+    border-radius: .8rem;
+    overflow: hidden;
+    box-shadow: 0 0px 10px rgba(230, 230, 230, 0.7);
+    margin: 3.2rem 0;
+    height: fit-content;
+
+    &:hover{
+        
+        .velada__image img{
+            @include m.hover-image;
+        }
+    }
+
+    .velada__image{
+        img{
+            height: 32rem;
+            object-fit: cover;
+            object-position: top center;
+            mask-image: linear-gradient(v.$black 90%, transparent);
+        }
+    }
+
+}
+
+.velada__date{
+    background-color: v.$black;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: .3rem;
+    left: .3rem;
+    padding: 1.6rem 1.2rem;
+    border-radius: .4rem;
+    border: solid 2px v.$gold;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 10;
+
+    span{
+        display: block;
+        font-family: v.$font_heading;
+        font-size: 2.2rem;
+        line-height: 2rem;
+        color: v.$gold;
+    }
+}
+.velada__content{
+
+    .velada__title{
+        margin: 0;
+        padding: 1.6rem;
+        background-color: v.$black;
+        text-align: center;
+        text-transform: capitalize;
+
+        h3{
+            color: v.$gold;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+}
+
+.velada__details{
+    background-color: v.$white;
+    //min-height: 24.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.6rem;
+}
+
+.velada-icons__list{
+    @include m.reset-lista; 
+    @include m.grid(2, 3.2rem);
+}
+
+.icons__item{
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 11.5rem;
+    gap: .8rem;
+    align-items: center;
+    color: v.$black;
+    text-transform: capitalize;
+
+    &:last-child{
+        grid-column: 1 / -1;
+    }
+
+    img{
+        width: auto;
+    }
+
+    p{
+        font-weight: v.$medium;
+        overflow-wrap: break-word;
+        //word-break: break-all; 
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.velada__footer{
+    .velada__price{
+        background-color: v.$blue-navy;
+        padding: 0rem 1.8rem;
+        color: v.$gold;
+        border-radius: .4rem;
+        text-align: center;
+    
+        span{
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        h4{
+            color: v.$gold;
+        }
+    }
+    
+    .velada__button{
+        border: 2px solid v.$gold;
+        font-weight: v.$bold;
+        text-transform: uppercase;
+        border-radius: .4rem;
+        padding: 0rem 2.4rem;
+        color: v.$blue-navy;
+
+        &:hover{
+            background-color: v.$gold;
+            transition: all .2s ease-in-out;
+        }
+    }
+}
+
+// Detalles de la velada
+.interna-details{
+
+    .velada__heading{
+        text-transform: uppercase;
+    }
+    .velada-header{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3.2rem;
+        margin: 8rem 0;
+
+        @include m.desktop{
+            grid-template-columns: 2fr 1fr;
+        }
+    }
+
+    .velada-author{
+
+        .velada-author__date,
+        .velada-author__name{
+            color: v.$gold;
+        }
+
+        .velada-author__name{
+            text-transform: capitalize;
+        }
+    }
+
+    .velada-header__image{
+        grid-column: 1 / 2;
+        justify-self: center;
+
+        img{
+            max-width: 60rem;
+            border-radius: .8rem;
+        }
+    }
+
+    .velada-header__details{
+        border-radius: .8rem;
+        background-color: v.$white;
+        padding: 2.4rem;
+        height: fit-content;
+        border-top: 2px solid v.$blue-navy;
+        justify-self: center;
+        max-width: 60rem;
+
+        @include m.desktop{
+            position: sticky;
+            top: 2rem;
+        }
+
+        h3{
+            color: v.$blue-navy;
+        }
+
+    }
+
+}
+
+.interna-details{
+
+    .velada-header__details{
+        .velada-icons__list{
+            grid-template-columns: 1fr;
+            gap: 2.4rem;
+        }
+    
+        .icons__item{
+            flex-basis: auto;
+    
+            p{
+                -webkit-line-clamp: none;
+                line-clamp: none;
+                white-space: wrap;
+            }
+
+            .velada-autor__correo{
+                text-decoration: underline;
+            }
+        }
+
+        // Links compartir rrss
+        .compartir-whatsapp,
+        .compartir-facebook{
+
+            &:hover{
+                filter: brightness(90%);
+            }
+
+            p{
+                color: v.$black;
+                font-size: 1.5rem;
+                text-transform: none;
+            }
+            
+        }
+    }
+    
+
+    .velada__fights,
+    .velada__description{
+        margin: 12rem 0;
+    }
+}
+
+.interna-details{
+    .velada__fight{
+        margin: 2.4rem 0;
+
+        .list-combate{
+            @include m.reset-lista;
+
+            .list-combate__item{
+                display: flex;
+                align-items: center;
+                gap: 1.6rem;   
+                margin: .8rem;     
+            }
+        }
+    }
+
+    .velada__fight-icon{
+
+        img{
+            width: 3.2rem;
+        }
+    }
+
+    .velada__boxer {
+
+        p{
+            font-weight: v.$semi_bold;
+            text-transform: capitalize;
+            text-align: center;
+        }
+    }
+
+    .velada__versus{
+        p{
+            color: v.$gold;
+            font-weight: v.$bold;
+            font-size: clamp(2.9rem, 1rem + 2.4vw, 4.2rem);
+        }
+    }
+}

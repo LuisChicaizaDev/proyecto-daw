@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1164)"><rect width="1000" height="1000" fill="#ffffff"></rect><g transform="matrix(17.5,0,0,17.5,167.5,150)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="38" height="40"><svg width="38" height="40" viewBox="0 0 38 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.6091 32V27.3418H24.3747V22.3672H18.6091V18.3066H24.3747V13.332H18.6091V8.67383H27.6267L32.3025 13.332V18.0781L29.9646 20.416L32.3025 22.7539V27.3418L27.6267 32H18.6091ZM9.6091 32V8.67383H17.3786V32H9.6091Z" fill="#0E0E12"></path>
+<rect y="4" width="7.55245" height="33.9231" rx="2" fill="#C3AA72"></rect>
+</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1164"><rect width="1000" height="1000" x="0" y="0" rx="350" ry="350"></rect></clipPath></defs></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1165)"><rect width="1000" height="1000" fill="#0e0e12"></rect><g transform="matrix(17.5,0,0,17.5,167.5,150)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="38" height="40"><svg width="38" height="40" viewBox="0 0 38 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.6091 32V27.3418H24.3747V22.3672H18.6091V18.3066H24.3747V13.332H18.6091V8.67383H27.6267L32.3025 13.332V18.0781L29.9646 20.416L32.3025 22.7539V27.3418L27.6267 32H18.6091ZM9.6091 32V8.67383H17.3786V32H9.6091Z" fill="white"></path>
+<rect y="4" width="7.55245" height="33.9231" rx="2" fill="#C3AA72"></rect>
+</svg></svg></g></g><defs><clipPath id="SvgjsClipPath1165"><rect width="1000" height="1000" x="0" y="0" rx="350" ry="350"></rect></clipPath></defs></svg></g></svg>

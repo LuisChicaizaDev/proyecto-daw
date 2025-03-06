@@ -1,0 +1,29 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.intro{
+
+    h2{
+        margin: 4.8rem 0;
+    }
+}
+
+.intro__info{
+    margin: 8rem 0;
+    @include m.grid(1, 4.8rem);
+    align-items: center;
+
+    @include m.tablet{
+        @include m.grid(2, 5.6rem);
+    }
+}
+.intro__image{
+    border-radius: .8rem;
+    overflow: hidden;
+
+    &:hover{
+        img{
+            @include m.hover-image;
+        }
+    }
+}

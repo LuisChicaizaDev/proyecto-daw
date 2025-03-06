@@ -1,0 +1,96 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.light-mode{
+    background-color: v.$white;
+    transition: background-color 0.15s ease-in;
+
+    h1, h2, h3, h4, h5{
+        color: v.$blue-navy;
+    }
+
+    p{
+        color: v.$black;
+    }
+
+    // Cards velada
+    .blog__content{
+
+        .blog__title{
+    
+            &:hover{
+                color: v.$gray_dark;
+            }
+        }
+    
+    }
+
+    // Entrada blog
+    .entrada{
+        .entrada__description{
+           
+            ul{
+                color: v.$black;
+            }
+        }
+    }
+
+    .velada__card{
+        box-shadow: 0 0 10px rgba(37, 37, 37, 0.6);
+    }
+
+    //Formularios
+    .formulario-group{
+        label{
+            color: v.$black;
+        }
+
+        .restablecer-contrasenia,
+        .iniciar-sesion{
+            color: v.$blue-navy;
+        }
+
+        .label-imagen__cartelera--titulo{
+            color: v.$black;
+        }
+    }
+
+    .velada-form__group--combates{
+        #contador-combates{
+            color: v.$slate_dark;
+            border-bottom: 2px solid v.$slate_dark;
+        }
+    }
+
+    // Nav Tabs
+    .nav-tabs__item{
+        .nav-link{
+            @include m.tabs-links(v.$black, v.$gold, v.$gold, v.$gray_dark);
+        }
+    }
+
+    // Btn back
+    .btn-back{
+        color: v.$blue-navy;
+        &:hover{
+            color: v.$gray_dark;
+        }
+    }
+
+    // Listas layout
+    .lista-layout{
+        .lista-body__item{
+            color: v.$black;
+        }
+        .btn-editar,
+        .btn-eliminar{
+            color: v.$gray_dark;
+        }
+
+        .btn-eliminar{
+            input{
+                color: v.$gray_dark;
+            }
+        }
+    }
+}

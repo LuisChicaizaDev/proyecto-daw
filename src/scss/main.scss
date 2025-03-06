@@ -1,0 +1,20 @@
+/*BASE*/
+@use 'base/normalize';
+@use 'base/variables';
+@use 'base/globales';
+@use 'base/mixins';
+@use 'base/utilidades';
+@use 'base/lightMode';
+
+/*LAYOUT*/
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/nav';
+@use 'layout/intro';
+@use 'layout/veladas';
+@use 'layout/contactar';
+@use 'layout/blog';
+@use 'layout/formularios';
+
+/*PAGINAS INTERNAS*/
+@use 'internas/panelControl';
