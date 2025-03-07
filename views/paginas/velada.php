@@ -121,6 +121,30 @@
                                 </span> 
                             </a>
                         </li>
+                        <?php 
+                            $id_velada = $_SERVER["REQUEST_URI"];
+                            $link_velada = "https://boxeoproject.free.nf" . $id_velada;
+                            if ($_SERVER['HTTP_HOST'] == 'boxeoproject.free.nf') : 
+                        ?>
+                        <li class="icons__item">
+                            <a href="https://api.whatsapp.com/send?text=¡Hola!😊Te%20comparto%20esta%20velada%20de%20boxeo🥊.%20Si%20quieres%20más%20información%20puedes%20mirarlo%20en%20este%20enlace👉%20<?php echo urlencode($link_velada); ?>"  
+                            target="_blank" class="compartir-whatsapp d-flex align-items-center gap-2">
+                                <img loading="lazy" width="26" height="26" src="static/icon-whatsapp.svg" alt="Icono de WhatsApp">
+                                <p>
+                                    Compartir en WhatsApp
+                                </p>
+                            </a>
+                        </li>
+                        <li class="icons__item">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode($link_velada); ?>"  
+                            target="_blank" class="compartir-facebook d-flex align-items-center gap-2">
+                                <img loading="lazy" width="26" height="26" src="static/icon-facebook.svg" alt="Icono de Facebook">
+                                <p>
+                                    Compartir en Facebook
+                                </p>
+                            </a>
+                        </li>
+                        <?php else: ?>
                         <li class="icons__item">
                             <a href="javascript:void(0);alert('Esta opción estará disponible en producción para compartir en WhatsApp🚀')"  
                             class="compartir-whatsapp d-flex align-items-center gap-2">
@@ -139,6 +163,7 @@
                                 </p>
                             </a>
                         </li>
+                        <?php endif; ?>
                     </ul>
                 </div>
 
