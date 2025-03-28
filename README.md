@@ -17,7 +17,7 @@ Para el desarrollo del proyecto, se implementó el patrón de arquitectura **MVC
 
 - **Gestión de veladas:** Los organizadores puedan crear veladas introduciendo la información como el tipo, imagen, lugar, fecha, hora, dirección, precio, nombre del promotor, descripción y crear hasta un máximo de 14 combates, además puede editar y eliminar las veladas creadas. 
 - **Gestión de boxeadores:** El organizador puede registrar boxeadores 
-proporcionando su nombre, apellido y peso. Además, pouede editar y eliminar sus
+proporcionando su nombre, apellido y peso. Además, puede editar y eliminar sus
 boxeadores registrados. 
 - **Visualizar detalles de la velada:** Los usuarios que visitan el sitio web pueden acceder a toda la información detalla de cada velada, obteniendo detalles como la hora, el lugar, el precio, la cartelera del evento, sus combates y más información. 
 - **Contactar con el Administrador:** El usuario puede ponerse en contacto con el administrador del sitio web, a través de un formulario de contacto introduciendo su nombre, correo electrónico, número de teléfono y escribiendo un mensaje con cualquier duda, problema o sugerencia.
@@ -77,6 +77,8 @@ composer install
 
 ## 💻 Demo
 Puedes visualizar e interactuar con este proyecto en el siguiente enlace : [boxeoproject.free.nf](https://boxeoproject.free.nf/)
+
+Puedes visualizar el diseño en Figma en el siguiente enlace : [Diseño en Figma](https://www.figma.com/design/dkXm4TGG5HkgB75qQNSQyx/Boxeo-Project?t=bA6OMLCiqSSfvgqA-1)
 
 ## 📜 Licencia
 Este proyecto está bajo la licencia MIT. Puedes consultar el archivo `LICENSE` para más información.
