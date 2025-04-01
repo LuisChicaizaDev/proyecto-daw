@@ -128,6 +128,17 @@
                     <input type="submit" class="formulario-submit acceder-form__submit btn-gold-block" value="Ingresar">
 
                 </form>
+
+                <!-- Usuario Demo-->
+                <div class="user-demo">
+                    <p class="user-demo__text user-demo--email">
+                        Correo: <span>demo@example.com</span>
+                    </p>
+
+                    <p class="user-demo__text user-demo--password">
+                        Contraseña: <span>Demo1234*</span>
+                    </p>
+                </div>
             </div><!--/Acceder Formulario-->
 
 

@@ -121,6 +121,25 @@
         text-decoration: underline;
     }
 }
+.acceder{
+    .user-demo{
+        max-width: 50rem;
+        margin: 0 auto;
+        padding: 2.4rem 3rem;
+        border-radius: .8rem;
+        background-color: #F6F8F9;
+        margin-bottom: 8rem;
+
+        .user-demo__text{
+            color: v.$black;
+            font-size: 1.5rem;
+
+            span{
+                font-weight: v.$semi_bold;
+            }
+        }
+    }
+}
 // Formulario publicar velada
 .velada-form__group--imagen{
     @include m.mobile{
