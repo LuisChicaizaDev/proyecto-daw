@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-02-2025 a las 01:00:52
+-- Tiempo de generación: 28-03-2025 a las 19:23:20
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -81,7 +81,7 @@ INSERT INTO `combate` (`id`, `id_velada`) VALUES
 (190, 89),
 (191, 89),
 (192, 89),
-(194, 90);
+(197, 90);
 
 -- --------------------------------------------------------
 
@@ -113,8 +113,8 @@ INSERT INTO `participar` (`id_combate`, `id_boxeador`) VALUES
 (191, 30),
 (192, 31),
 (192, 32),
-(194, 33),
-(194, 34);
+(197, 33),
+(197, 34);
 
 -- --------------------------------------------------------
 
@@ -167,9 +167,9 @@ CREATE TABLE `velada` (
 
 INSERT INTO `velada` (`id`, `tipo`, `imagen_url`, `lugar`, `fecha`, `hora`, `direccion`, `precio`, `nombre_promotor`, `descripcion`, `fecha_publicada`, `id_usuario`) VALUES
 (87, 'Campeonato unificado', '3b2d7b128d40f9234c9adfd83e31e506.webp', 'T-Mobile Arena', '2025-02-14', '20:00:00', '3570 S Las Vegas Blvd, Paradise, NV 89109, Estados Unidos', 200.00, 'Canelo Promotions', 'Este combate se llevará a cabo en la Vegas, Nevada entre Canelo y Berlanga para saber que boxeador se hace con los títulos peso supermediano AMB, OMB Y CMB.\r\nAdemás, se disputaron otros combates pero estos fueron los principales.\r\nNOTA: La fecha de esta cartelera es ficticia y es utilizada únicamente para fines académicos.', '2025-02-09', 14),
-(88, 'Peso supergallo', '0b071a4e567123f32e2fae230b8e2223.webp', 'Ariake Arena, Tokio', '2025-03-22', '20:00:00', 'Ariake, Koto City, Tokyo 135-0063, Japón', 150.00, 'Ohashi Promotions', 'El boxeador japonés Inoue expone sus títulos del peso supergallo FIB, CMB, AMB y OMB antes el australiano Goodman.\r\nEsta pelea tuvo que realizarse en diciembre de 2024, pero se pospuso para el 24 enero de 2025 por una lesión de Goodman. Finalmente, tuvo que cancelarse ya que se no pudo recuperarse de la lesión y el japonés tuvo que enfrentar a otro oponente.\r\nNOTA: La fecha de esta cartelera es ficticia y es utilizada únicamente para fines académicos.', '2025-02-09', 14),
+(88, 'Peso supergallo', '0b071a4e567123f32e2fae230b8e2223.webp', 'Ariake Arena, Tokio', '2025-03-22', '20:00:00', 'Ariake, Koto City, Tokyo 135-0063, Japón', 150.00, 'Ohashi Promotions', 'El boxeador japonés Inoue expone sus títulos del peso supergallo FIB, CMB, AMB y OMB antes el australiano Goodman.\r\nEsta pelea tuvo que realizarse en diciembre de 2024, pero se aplazó para el 24 enero de 2025 por una lesión de Goodman. Finalmente, tuvo que cancelarse ya que no se pudo recuperar de la lesión y el japonés tuvo que enfrentar a otro oponente.\r\nNOTA: La fecha de esta cartelera es ficticia y es utilizada únicamente para fines académicos.', '2025-02-09', 14),
 (89, ' Campeonato unificado', '2212841e624532dd5753eed417646804.webp', 'Kingdom Arena, Arabia Saudita', '2025-02-22', '19:00:00', ' Riyadh 13516, Arabia Saudí', 250.00, 'Turki Al-Alshikh ', 'Esta cartelera es una de las más esperadas del 2025. Supone la Revancha entre Beterbiev vs Bivol, quienes se enfrentaron en octubre de 2024 y se llevó la victoria Artur Beterbiev.\r\nEn juego están los cinturones unificados del peso semipesado de la IBF, WBC y WBO.\r\nAdemás, se disputarán más combates con cinturones también en juego.', '2025-02-09', 15),
-(90, 'Interclub', '36d91faeee40a8d88490458008829126.webp', 'Centro Deportivo Aitor Nieto', '2025-02-27', '20:00:00', 'Colloto', 10.00, 'Aitor Nieto ', 'Esta es una velada que tuvo lugar en el año 2024 en la cual participé.\r\nAhora es una cartelera con una fecha ficticia para fines académicos.\r\nEsta es una velada que tuvo lugar en el año 2024 en la cual participé.\r\nAhora es una cartelera con una fecha ficticia para fines académicos.', '2025-02-10', 18);
+(90, 'Interclub', '36d91faeee40a8d88490458008829126.webp', 'Centro Deportivo Aitor Nieto', '2025-09-27', '20:30:00', 'Colloto', 10.00, 'Aitor Nieto ', 'NOTA: Esta es una velada que tuvo lugar en el año 2024 en la cual participé.\r\nAhora es una cartelera con una fecha ficticia publicada para fines académicos.\r\n', '2025-02-10', 18);
 
 --
 -- Índices para tablas volcadas
@@ -224,7 +224,7 @@ ALTER TABLE `boxeador`
 -- AUTO_INCREMENT de la tabla `combate`
 --
 ALTER TABLE `combate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=197;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=198;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
